@@ -1,0 +1,42 @@
+<div class="container my-5">
+  <div class="row">
+    <div class="col-12 col-md-2  ">
+      <div class="border bg-dark text-white text-uppercase">
+        <a routerLink="/products/comparison" class="mx-3">
+          <i class="bi bi-list"></i>
+          sản phẩm</a
+        >
+      </div>
+      <div
+        class="my-4 mx-2 text-center text-capitalize fw-bold border-bottom border-3"
+        *ngFor="let category of categories"
+      >
+        <a>{{ category.name }}</a>
+        
+      </div>
+    </div>
+    <div class="col-12 col-md-10">
+      <div class="row">
+        <div
+          class="col-md-3 col-6 text-center"
+          *ngFor="let product of products"
+        >
+          <div class="my-3 border shadow-sm">
+            <img
+              src="{{ product.image }}"
+              alt="{{ product.name }}"
+              class="img-fluid"
+            />
+            <p>{{ product.name }}</p>
+            <p>Giá bán :{{ product.price }}</p>
+            <button
+              class="border rounded-pill my-3 btn btn-outline-danger text-capitalize"
+            >
+              Mua Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
